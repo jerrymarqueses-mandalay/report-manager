@@ -424,7 +424,7 @@ class BiSQLView(models.Model):
             "numbercall": -1,
             "interval_number": 1,
             "interval_type": "days",
-            "nextcall": datetime.now() + timedelta(days=1)
+            "nextcall": datetime.now() + timedelta(days=1),
             "active": True,
         }
 
