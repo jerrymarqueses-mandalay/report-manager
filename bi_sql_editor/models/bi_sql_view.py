@@ -4,6 +4,7 @@
 
 import logging
 from datetime import datetime
+from datetime import timedelta
 
 from psycopg2 import ProgrammingError
 
@@ -423,7 +424,7 @@ class BiSQLView(models.Model):
             "numbercall": -1,
             "interval_number": 1,
             "interval_type": "days",
-            "nextcall": datetime(now.year, now.month, now.day + 1),
+            "nextcall": datetime.now() + timedelta(days=1)
             "active": True,
         }
 
